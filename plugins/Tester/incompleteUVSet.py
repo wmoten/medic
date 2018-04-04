@@ -2,12 +2,12 @@ import medic
 from maya import OpenMaya
 
 
-class IncompleteUV(medic.PyTester):
+class IncompleteUVSet(medic.PyTester):
     def __init__(self):
-        super(IncompleteUV, self).__init__()
+        super(IncompleteUVSet, self).__init__()
 
     def Name(self):
-        return "IncompleteUV"
+        return "IncompleteUVSet"
 
     def Description(self):
         return "Mesh(s) has incomplete UV(s)"
@@ -42,4 +42,4 @@ class IncompleteUV(medic.PyTester):
 
 
 def Create():
-    return IncompleteUV()
+    return IncompleteUVSet()

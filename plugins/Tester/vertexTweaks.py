@@ -2,15 +2,15 @@ import medic
 from maya import OpenMaya
 from maya import cmds
 
-class FreezeVertex(medic.PyTester):
+class VertexTweaks(medic.PyTester):
     def __init__(self):
-        super(FreezeVertex, self).__init__()
+        super(VertexTweaks, self).__init__()
 
     def Name(self):
-        return "FreezeVertex"
+        return "VertexTweaks"
 
     def Description(self):
-        return "Not Frozen Verticies"
+        return "Verticies are tweaked. Not Frozen."
 
     def Match(self, node):
         return node.object().hasFn(OpenMaya.MFn.kMesh)
@@ -36,4 +36,4 @@ class FreezeVertex(medic.PyTester):
         return True
 
 def Create():
-    return FreezeVertex()
+    return VertexTweaks()
