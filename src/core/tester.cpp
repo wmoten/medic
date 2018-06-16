@@ -18,6 +18,15 @@ std::string MdTester::Description()
     return "";
 };
 
+std::vector<std::string> MdTester::Dependencies()
+{
+    return std::vector<std::string>();
+}
+
+void MdTester::initialize() {}
+
+void MdTester::finalize() {}
+
 bool MdTester::Match(MdNode *node)
 {
     return false;
@@ -133,6 +142,8 @@ size_t MdTesterContainer::size()
     return m_testers.size();
 }
 
+
+MdTesterIterator::MdTesterIterator() {}
 
 MdTesterIterator::MdTesterIterator(MdTesterContainer *container)
 {
